@@ -23,7 +23,7 @@ function createMenuItem(name, price, category){
     }
     return newMenuItem
 }
-createMenuItem('tacos', 8, 'Lunch');
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -32,8 +32,13 @@ Test your createMenuItems function by doing the following:
   2. Create at least 3 menu items (objects) of your choosing making sure they have name, price, and category keys
   3. Log each returned object to the console  
   
-  For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
+  For example:  would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+let tacos = createMenuItem("tacos", 8, "lunch");
+let pizza = createMenuItem("pizza", 5, "lunch");
+let pancakes = createMenuItem("pancakes", 6, "breakfast");
+
+// console.log(tacos, pizza, pancakes);
 
 
 
@@ -53,10 +58,18 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-}
 
+  discount : function(customerType) {
+    if(customerType === 'student' || customerType === 'teacher'){
+    return burger.price * .75;
+  } else if (customerType === 'public') {
+  return burger.price * .9;
+    }//else
+  }//discount
+ 
+}//burger
 
+console.log(burger.discount('teacher'));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -74,7 +87,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews["Julius"].feedback);
 
 
 
